@@ -1,3 +1,4 @@
 [submodule "definitions"]
 	path = definitions
-	url = https://github.com/ericcj/definitions
+	url = git@github.com:ericcj/definitions.git
+	branch = master

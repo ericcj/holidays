@@ -7,6 +7,10 @@ require File.expand_path(File.dirname(__FILE__)) + '/../test_helper'
 class GbDefinitionTests < Test::Unit::TestCase  # :nodoc:
 
   def test_gb
+    assert_equal "Mothering Sunday", (Holidays.on(Date.civil(2022, 3, 27), [:gb], [:informal])[0] || {})[:name]
+
+    assert_equal "Mothering Sunday", (Holidays.on(Date.civil(2021, 3, 14), [:gb], [:informal])[0] || {})[:name]
+
     assert_equal "Good Friday", (Holidays.on(Date.civil(2008, 3, 21), [:gb], [:informal])[0] || {})[:name]
 
     assert_equal "Easter Sunday", (Holidays.on(Date.civil(2008, 3, 23), [:gb], [:informal])[0] || {})[:name]
